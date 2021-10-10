@@ -7,11 +7,11 @@ const useTopics = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [errorMsg, setErrorMsg] = useState();
 
-  const fetchItems = useCallback(async (page) => {
+  const fetchItems = useCallback(async ({ page, search }) => {
     try {
       setErrorMsg("");
       setIsLoading(true);
-      const response = await getTopics(page);
+      const response = await getTopics({ page, search });
       const items = response?.data?.items;
       const totalItems = response?.data?.total_count;
       setItems(items);

@@ -4,7 +4,7 @@ import FormControl from "react-bootstrap/FormControl";
 import Button from "react-bootstrap/Button";
 
 export default function Searchbar(props) {
-  const { term, handleTermChange, handleSearch } = props;
+  const { term, handleTermChange, handleClickOnSearch } = props;
 
   const onTermChange = (evt) => {
     const newTerm = evt?.currentTarget?.value;
@@ -20,7 +20,7 @@ export default function Searchbar(props) {
         placeholder="Search topic..."
         aria-label="Search topic"
       />
-      <Button variant="outline-secondary" onClick={handleSearch}>
+      <Button variant="outline-secondary" onClick={handleClickOnSearch}>
         Search
       </Button>
     </InputGroup>

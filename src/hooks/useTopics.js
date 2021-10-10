@@ -5,18 +5,26 @@ const useTopics = () => {
   const [items, setItems] = useState();
   const [totalItems, setTotalItems] = useState();
   const [isLoading, setIsLoading] = useState(false);
+  const [errorMsg, setErrorMsg] = useState();
 
   const fetchItems = useCallback(async (page) => {
-    setIsLoading(true);
-    const response = await getTopics(page);
-    const items = response?.data?.items;
-    const totalItems = response?.data?.total_count;
-    setItems(items);
-    setTotalItems(totalItems);
-    setIsLoading(false);
+    try {
+      setErrorMsg("");
+      setIsLoading(true);
+      const response = await getTopics(page);
+      const items = response?.data?.items;
+      const totalItems = response?.data?.total_count;
+      setItems(items);
+      setTotalItems(totalItems);
+    } catch (err) {
+      const errorMsg = err?.response?.data?.message;
+      setErrorMsg(errorMsg);
+    } finally {
+      setIsLoading(false);
+    }
   }, []);
 
-  return [items, totalItems, isLoading, fetchItems];
+  return [items, totalItems, isLoading, errorMsg, fetchItems];
 };
 
 export default useTopics;

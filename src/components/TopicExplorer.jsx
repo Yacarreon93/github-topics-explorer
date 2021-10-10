@@ -13,7 +13,7 @@ export default function TopicExplorer() {
 
   const handlePageChange = (pageToGo) => setPage(pageToGo);
 
-  const [topics, totalCount, isLoading, fetchTopics] = useTopics();
+  const [topics, totalCount, isLoading, errorMsg, fetchTopics] = useTopics();
 
   useEffect(() => fetchTopics({ page }), [page, fetchTopics]);
 
@@ -25,6 +25,7 @@ export default function TopicExplorer() {
         items={topics}
         totalCount={totalCount}
         isLoading={isLoading}
+        errorMsg={errorMsg}
       />
       <Pagination
         activePage={page}

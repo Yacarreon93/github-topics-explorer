@@ -1,12 +1,16 @@
 import React from "react";
+import Alert from "react-bootstrap/Alert";
 import ListGroup from "react-bootstrap/ListGroup";
 import LoadingSpinner from "./LoadingSpinner";
 
 export default function ResultList(props) {
-  const { items, totalCount, isLoading } = props;
+  const { items, totalCount, isLoading, errorMsg } = props;
+
   return (
     <div>
-      {isLoading ? (
+      {errorMsg ? (
+        <Alert variant="danger">{errorMsg}</Alert>
+      ) : isLoading ? (
         <LoadingSpinner />
       ) : (
         <ListGroup className="mb-3" variant="flush">

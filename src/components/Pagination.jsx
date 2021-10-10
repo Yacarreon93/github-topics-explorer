@@ -24,6 +24,7 @@ export default function Pagination(props) {
           const pageNumber = index + 1;
           return (
             <PaginationItem
+              key={pageNumber}
               pageNumber={pageNumber}
               activePage={activePage}
               onClick={() => handlePageChange(pageNumber)}

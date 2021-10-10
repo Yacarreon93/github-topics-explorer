@@ -2,6 +2,7 @@ import React from "react";
 import Alert from "react-bootstrap/Alert";
 import ListGroup from "react-bootstrap/ListGroup";
 import LoadingSpinner from "./LoadingSpinner";
+import Topic from "./Topic";
 
 export default function ResultList(props) {
   const { items, totalCount, isLoading, errorMsg } = props;
@@ -15,20 +16,9 @@ export default function ResultList(props) {
       ) : (
         <ListGroup className="mb-3" variant="flush">
           <h3>{totalCount} topic results</h3>
-          {items?.map(
-            ({
-              name,
-              display_name: displayName,
-              short_description: shortDescrription,
-            }) => (
-              <ListGroup.Item key={name}>
-                <div className="mb-3">
-                  <a href={`/${name}`}>{displayName || name}</a>
-                </div>
-                {shortDescrription && <p>{shortDescrription}</p>}
-              </ListGroup.Item>
-            )
-          )}
+          {items?.map((data) => (
+            <Topic data={data} />
+          ))}
         </ListGroup>
       )}
     </div>

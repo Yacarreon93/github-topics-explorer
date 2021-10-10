@@ -21,7 +21,7 @@ export default function ResultList(props) {
               display_name: displayName,
               short_description: shortDescrription,
             }) => (
-              <ListGroup.Item>
+              <ListGroup.Item key={name}>
                 <div className="mb-3">
                   <a href={`/${name}`}>{displayName || name}</a>
                 </div>

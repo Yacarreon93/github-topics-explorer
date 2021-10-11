@@ -17,7 +17,7 @@ export default function ResultList(props) {
         <ListGroup className="mb-3" variant="flush">
           <h3>{totalCount} topic results</h3>
           {items?.map((data) => (
-            <Topic data={data} />
+            <Topic key={data?.name} data={data} />
           ))}
         </ListGroup>
       )}

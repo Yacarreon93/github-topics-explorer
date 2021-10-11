@@ -52,3 +52,4 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 - Make pagination component dinanmyc according to the total count of topics, it's static to 5 pages at the moment.
 - Retrieve and display another interesting topic information.
 - Add unit tests on each component.
+- Fix package vulnerabilities

@@ -1,8 +1,9 @@
 import React from "react";
+import PropTypes from "prop-types";
 import BootstrapPagination from "react-bootstrap/Pagination";
 import PaginationItem from "./PaginationItem";
 
-export default function Pagination(props) {
+function Pagination(props) {
   const { numOfPages, activePage, handlePageChange } = props;
 
   const handleClickOnPrev = () => {
@@ -36,3 +37,11 @@ export default function Pagination(props) {
     </BootstrapPagination>
   );
 }
+
+Pagination.propTypes = {
+  numOfPages: PropTypes.number.isRequired,
+  activePage: PropTypes.number.isRequired,
+  handlePageChange: PropTypes.func.isRequired,
+};
+
+export default Pagination;

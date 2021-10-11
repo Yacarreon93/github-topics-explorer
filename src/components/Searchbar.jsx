@@ -1,9 +1,10 @@
 import React from "react";
+import PropTypes from "prop-types";
 import InputGroup from "react-bootstrap/InputGroup";
 import FormControl from "react-bootstrap/FormControl";
 import Button from "react-bootstrap/Button";
 
-export default function Searchbar(props) {
+function Searchbar(props) {
   const { term, handleTermChange, handleClickOnSearch } = props;
 
   const onTermChange = (evt) => {
@@ -26,3 +27,11 @@ export default function Searchbar(props) {
     </InputGroup>
   );
 }
+
+Searchbar.propTypes = {
+  term: PropTypes.string.isRequired,
+  handleTermChange: PropTypes.func.isRequired,
+  handleClickOnSearch: PropTypes.func.isRequired,
+};
+
+export default Searchbar;

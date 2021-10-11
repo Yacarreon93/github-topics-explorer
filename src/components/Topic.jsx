@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import ListGroup from "react-bootstrap/ListGroup";
 
-export default function Topic({ data }) {
+function Topic({ data }) {
   const {
     name,
     display_name: displayName,
@@ -26,3 +26,5 @@ Topic.propTypes = {
     short_description: PropTypes.string,
   }).isRequired,
 };
+
+export default Topic;

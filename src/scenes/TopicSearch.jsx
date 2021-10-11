@@ -1,8 +1,8 @@
 import React, { useEffect, useState, useMemo } from "react";
 import debounce from "lodash.debounce";
-import Searchbar from "./Searchbar";
-import ResultList from "./ResultList";
-import Pagination from "./Pagination";
+import Searchbar from "../components/Searchbar";
+import ResultList from "../components/ResultList";
+import Pagination from "../components/Pagination";
 import useTopics from "../hooks/useTopics";
 import usePagination from "../hooks/usePagination";
 

@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Container from "react-bootstrap/Container";
 import "bootstrap/dist/css/bootstrap.min.css";
 import TopicDetails from "./scenes/TopicDetails";
-import TopicExplorer from "./components/TopicExplorer";
+import TopicSearch from "./scenes/TopicSearch";
 
 function App() {
   return (
@@ -13,7 +13,7 @@ function App() {
           <h1 className="my-3">Github Topic Explorer</h1>
           <Switch>
             <Route exact path="/:topicName" component={TopicDetails} />
-            <Route component={TopicExplorer} />
+            <Route component={TopicSearch} />
           </Switch>
         </Container>
       </Router>

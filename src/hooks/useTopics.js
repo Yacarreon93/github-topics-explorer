@@ -1,5 +1,5 @@
 import { useState, useCallback } from "react";
-import { getTopics } from "../serivces/api";
+import { getTopics } from "../apis/github/rest";
 
 const useTopics = () => {
   const [items, setItems] = useState();

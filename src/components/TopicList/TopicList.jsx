@@ -22,11 +22,13 @@ function TopicList(props) {
 }
 
 TopicList.propTypes = {
-  topics: PropTypes.shape({
-    name: PropTypes.string,
-    display_name: PropTypes.string,
-    short_description: PropTypes.string,
-  }).isRequired,
+  topics: PropTypes.arrayOf(
+    PropTypes.shape({
+      name: PropTypes.string,
+      display_name: PropTypes.string,
+      short_description: PropTypes.string,
+    })
+  ).isRequired,
   totalCount: PropTypes.number.isRequired,
   isLoading: PropTypes.bool.isRequired,
   errorMsg: PropTypes.string.isRequired,

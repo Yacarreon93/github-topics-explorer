@@ -1,6 +1,6 @@
 # Github Topic Explorer
 
-This app helps to search for Github topics. Cliking on each topic displays the other topics related to that topic and how many stargazers they have. And so forth.
+This app helps to search for Github topics. Clicking on each topic displays the other topics related to that topic and how many stargazers they have. And so forth.
 
 ## How to run app & test
 
@@ -28,7 +28,7 @@ To interact with the Github GraphQL API you'll need to have:
 
 ## Observations
 
-The Github GraphQL API does not provide any way to search topics by a term, according to the official documentation, the [search](https://docs.github.com/en/graphql/reference/queries#searchresultitemconnection) query does not support something like a TOPIC [SearchType](https://docs.github.com/en/graphql/reference/enums#searchtype), so Github REST API is used to achieve this task.
+The Github GraphQL API does not provide any way to search topics by a term, according to the official documentation, the [search](https://docs.github.com/en/graphql/reference/queries#searchresultitemconnection) query does not support something like a TOPIC [SearchType](https://docs.github.com/en/graphql/reference/enums#searchtype), so Github REST API is used to perform this task.
 
 The data on each topic such as stargazers count and related topics is provided by the Github GraphQL API.
 
@@ -41,7 +41,7 @@ Core packages:
 - react-router-dom
 - axios
 
-The most use of Funcional Components & React hooks the better.
+The most use of Funcional components & React hooks the better.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 

@@ -28,7 +28,7 @@ function TopicDetails({ match }) {
         <p>
           {relatedTopics?.length && "Related to: "}
           {relatedTopics?.map(({ name }) => (
-            <span className="px-2">
+            <span key={name} className="px-2">
               <Link to={`/${name}`}>{name}</Link>
             </span>
           ))}

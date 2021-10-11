@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useMemo } from "react";
 import debounce from "lodash.debounce";
 import Searchbar from "../components/Searchbar";
-import ResultList from "../components/ResultList";
+import TopicList from "../components/TopicList/TopicList";
 import Pagination from "../components/Pagination/Pagination";
 import useTopics from "../hooks/useTopics";
 import usePagination from "../hooks/usePagination";
@@ -52,8 +52,8 @@ export default function TopicExplorer() {
         handleTermChange={handleSearchTermChange}
         handleClickOnSearch={handleClickOnSearch}
       />
-      <ResultList
-        items={topics}
+      <TopicList
+        topics={topics}
         totalCount={totalCount}
         isLoading={isLoading}
         errorMsg={errorMsg}

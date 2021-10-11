@@ -1,5 +1,4 @@
 import React, { useEffect, useState, useMemo } from "react";
-import Container from "react-bootstrap/Container";
 import debounce from "lodash.debounce";
 import Searchbar from "./Searchbar";
 import ResultList from "./ResultList";
@@ -47,8 +46,7 @@ export default function TopicExplorer() {
   }, [apiParams, fetchTopics]);
 
   return (
-    <Container>
-      <h1 className="my-3">Github Topic Explorer</h1>
+    <div>
       <Searchbar
         term={searchTerm}
         handleTermChange={handleSearchTermChange}
@@ -65,6 +63,6 @@ export default function TopicExplorer() {
         numOfPages={numOfPages}
         handlePageChange={handlePageChange}
       />
-    </Container>
+    </div>
   );
 }

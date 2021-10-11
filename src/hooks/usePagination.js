@@ -1,7 +1,9 @@
 import { useState } from "react";
 
+const defaultPage = 1;
+
 const usePagination = () => {
-  const [page, setPage] = useState(1);
+  const [page, setPage] = useState(defaultPage);
 
   return [page, setPage];
 };

@@ -15,4 +15,7 @@ export const getTopics = ({
   page = defaultPage,
   perPage = defaultPerPage,
   search = defaultSearchTerm,
-}) => axios.get(`/search/topics?q=${search}&page=${page}&per_page=${perPage}`);
+}) =>
+  axiosInstance.get(
+    `/search/topics?q=${search}&page=${page}&per_page=${perPage}`
+  );

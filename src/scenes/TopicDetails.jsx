@@ -8,7 +8,7 @@ function TopicDetails({ match }) {
   return (
     <div>
       <div className="mb-3">
-        <Link to="/">&lt; Go Back</Link>
+        <Link to="/">&lt; Go topic search</Link>
       </div>
       <h2>{topicName}</h2>
     </div>

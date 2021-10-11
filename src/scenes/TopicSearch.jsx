@@ -2,7 +2,7 @@ import React, { useEffect, useState, useMemo } from "react";
 import debounce from "lodash.debounce";
 import Searchbar from "../components/Searchbar";
 import ResultList from "../components/ResultList";
-import Pagination from "../components/Pagination";
+import Pagination from "../components/Pagination/Pagination";
 import useTopics from "../hooks/useTopics";
 import usePagination from "../hooks/usePagination";
 
